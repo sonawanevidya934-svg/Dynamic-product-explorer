@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Product Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Dynamic Product Explorer</h1>
+        <p>Explore live products using REST API</p>
+    </header>
+
+    <main class="container">
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                aria-label="Search products"
+            >
+
+            <select id="sortSelect" aria-label="Sort products">
+                <option value="default">Sort By</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+
+        </section>
+
+        <section
+            class="categories"
+            id="categoryButtons"
+            aria-label="Product categories"
+        >
+        </section>
+
+        <div id="loading" class="loading">
+            Loading products...
+        </div>
+
+        <div id="error" class="error hidden">
+            Unable to load products. Please try again.
+        </div>
+
+        <section
+            id="productContainer"
+            class="product-grid"
+        >
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Dynamic JavaScript REST API Project</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
